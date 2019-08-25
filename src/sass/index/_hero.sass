@@ -1,0 +1,120 @@
+.navigation
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-bottom: 40px
+  &-logoblock
+    display: flex
+  &-text
+    margin-bottom: -6px
+    margin-left: 10px
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+    align-items: center
+  &__title
+    display: block
+    font-size: 31px
+    font-weight: 700
+    line-height: 19px
+    text-transform: uppercase
+    color: $font-color
+    margin-bottom: 11px
+  &__subtitle
+    display: block
+    font-size: 14px
+    font-weight: 400
+    line-height: 20.3px
+    text-transform: uppercase
+    letter-spacing: 1.56px
+    color: $font-color
+  &-bar
+    margin-left: 45px
+    display: flex
+    padding-top: 17px
+    &__item
+      position: relative
+      margin-right: 35px 
+      text-decoration: none
+      font-size: 14px
+      font-weight: 700
+      line-height: 19px
+      text-transform: uppercase
+      color: $nav-font
+      transition: 0.2s
+      &::after
+        content: ''
+        height: 2px
+        width: 0px
+        position: absolute
+        top: 28px
+        left: 13px
+        background-color: $main-color
+      &:hover
+        cursor: pointer
+        color: $nav-hover
+        &::after
+          width: 38px
+  &__call
+    margin-top: 12px
+    background-color: $main-color
+    border-radius: 50%
+    border: none
+    height: 45px
+    width: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      cursor: pointer
+      background-color: darken($main-color, 15%)
+
+.hero
+  padding-top: 18px
+  &-content
+    background: $main-color url('../img/index/hero/hero.jpg')
+    background-size: contain
+    height: 907px
+    display: flex
+    flex-direction: column
+    color: $white-color
+  &-block
+    flex-basis: 50%
+    margin-left: auto
+    padding-right: 375px
+    margin-top: 302px
+  &__pretitle
+    display: block
+    font-size: 25px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 11px
+  &__title
+    margin-top: 0
+    font-size: 88px
+    font-weight: 700
+    line-height: 93px
+    text-transform: uppercase
+    margin-bottom: 27px
+  &__subtitle
+    display: block
+    font-size: 16px
+    font-weight: 400
+    line-height: 25px
+    margin-bottom: 26px
+    max-width: 500px
+    padding-left: 5px
+  &__button
+    margin-left: 5px
+    display: inline-block
+    font-size: 14px
+    font-weight: 700
+    line-height: 31px
+    text-transform: uppercase
+    color: $text-button
+    background-color: $white-color
+    text-align: center
+    padding: 8px 35px
+    border: none
+    border-radius: 25px
+    max-width: 210px
