@@ -1,0 +1,79 @@
+.why
+  padding-top: 39px
+  padding-bottom: 103px
+  &__title
+    font-size: 46px
+    font-weight: 700
+    line-height: 46px
+    color: $main-text
+    margin-bottom: 60px
+    position: relative
+    &::after
+      content: ''
+      height: 3px
+      width: 92px
+      top: 66px
+      background-color: $title-text
+      left: 0
+      position: absolute
+  &-block
+    display: flex
+    justify-content: space-between
+  &-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__image
+      background-color: $bg-color
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      width: 168px
+      height: 168px
+      position: relative
+      margin-bottom: 43px
+      &::before
+        content: ''
+        position: absolute
+        top: center
+        left: center
+        width: 193px
+        height: 193px
+        background: url('../img/index/why/bg.png') no-repeat
+        background-position: center center
+    &__title
+      font-size: 25px
+      font-weight: 700
+      line-height: 28px
+      color: $main-text
+      text-align: center
+      margin-bottom: 20px
+    &__description
+      display: inline-block
+      font-size: 15px
+      font-weight: 400
+      line-height: 24px
+      color: $description
+      margin-bottom: 35px
+      text-align: center
+      max-width: 374px
+    &__more
+      font-size: 14px
+      font-weight: 700
+      line-height: 24px
+      text-transform: uppercase
+      background: none
+      border: none  
+      position: relative
+      color: $main-color
+      &::after
+        content: ''
+        position: absolute
+        height: 2px
+        width: 44px
+        top: 31px
+        left: 25px
+        background-color: $main-color
+
+
