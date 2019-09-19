@@ -1,0 +1,161 @@
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(#000, 0.5)
+  display: none
+  z-index: 500
+  &_active
+    display: flex
+  &-content
+    flex-basis: 100%
+    padding: 50px 70px
+  &-dialog
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: auto
+    max-width: 630px
+    width: 100%
+    min-width: 200px
+    background-color: #fff
+    position: relative
+    border-radius: 15px
+    &__close
+      position: absolute
+      top: 10px
+      right: 10px
+      border: none
+      border-radius: 50%
+      font-size: 30px
+      color: $font-color
+      width: 35px
+      background-color: $white-color
+      text-align: center
+      &:hover
+        background-color: $main-color
+        color: $white-color
+    &__title
+      margin-bottom: 10px
+      font-size: 27px
+      line-height: 33px
+      color: $main-color
+    &__subtitle
+      margin-bottom: 30px
+      display: block
+      font-size: 16px
+      line-height: 35px
+      color: $font-color
+  &-form
+    display: flex
+    align-items: center
+    flex-direction: column
+    &__input
+      width: 100%
+      margin-bottom: 20px
+      border-radius: 15px
+      border: 2px solid $main-color
+      padding: 17px 25px
+      font-size: 16px
+      color: $font-color
+      background-color: $bg-color
+      &:focus
+        border-color: $footer-border
+    &__btn
+      margin-top: 10px
+      border: none
+      background-color: $main-color
+      border-radius: 22px
+      padding: 15px 45px
+      font-size: 15px
+      font-weight: 700
+      text-transform: uppercase
+      color: $white-color
+      &:hover
+        background-color: darken($main-color, 7%)
+        cursor: pointer
+  &__success
+    .modal
+      &-content
+        padding: 50px 40px
+      &-dialog
+        &__title
+          margin: 20px 0
+          font-size: 30px
+          text-align: center
+
+@media (max-width: 991px)
+  .modal
+    &-dialog
+      &__close
+        &:hover
+          background-color: $white-color
+          color: $font-color
+    &-form
+      &__btn
+        &:hover
+          background-color: $main-color
+          cursor: auto
+
+@media (max-width: 768px)
+  .modal
+    &-dialog
+      max-width: 540px
+      &__title
+        margin-top: 10px
+        font-size: 25px
+      &__subtitle
+        margin-bottom: 20px
+    &-content
+      padding: 50px
+    &-form
+      &__input
+        margin-bottom: 15px
+
+@media (max-width: 570px)
+  .modal
+    &-dialog
+      max-width: 400px
+    &__success
+      .modal
+        &-content
+          padding: 40px 30px
+        &-dialog
+          &__title
+            font-size: 22px
+        
+@media (max-width: 425px)
+  .modal
+    &-dialog
+      max-width: 290px
+      &__close
+        top: 5px
+        right: 5px
+        font-size: 27px
+      &__title
+        font-size: 21px
+        margin-bottom: 0
+      &__subtitle
+        font-size: 13px
+        margin-bottom: 20px
+    &-form
+      &__input
+        padding: 13px 20px
+        font-size: 13px
+        margin-bottom: 10px
+      &__btn
+        padding: 10px 30px
+        font-size: 13px
+        margin-top: 5px
+    &-content
+      padding: 35px 20px
+    &__success
+      .modal
+        &-content
+          padding: 30px 20px
+        &-dialog
+          &__title
+            font-size: 17px
+            line-height: 22px

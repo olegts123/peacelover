@@ -6,72 +6,114 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/index.css">
   <title>Миролюбец</title>
 </head>
 <body>
-  <navbar class="navbar">
+  <!-- Yandex.Metrika counter --> 
+  <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(55392682, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55392682" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  
+  <div class="navbar">
     <div class="container">
       <div class="navbar-block">
         <div class="navbar__info">
           <div class="navbar-block__phone">
-            <img src="img/navbar/phone.png">
+            <img src="img/navbar/phone.png" alt="Картинка">
             <a href="tel:+7(950)321-65-55" class="phone navbar__phone">8 (950) 321-65-55</a>
           </div>
           <div class="navbar-block__adress">
-            <img src="img/navbar/mark.png">
+            <img src="img/navbar/mark.png" alt="Картинка">
             <span class="adress navbar__adress">Ул. Мира 6, дом 1, офис 4.</span>
           </div>
         </div>
-        <div class="navbar-singup">
+        <div class="navbar-signup">
           <a href="#" class="navbar__login">Логин</a>
           <a href="#" class="navbar__signup">Регистрация</a>
         </div>
       </div>
     </div>
-  </navbar>
+  </div>
 
   <main>
-    <header class="hero">
+    <div class="navigation">
       <div class="container">
-        <div class="navigation">
-          <div class="navigation-logoblock">
-            <img src="img/index/hero/logo.png" alt="Логотип">
-            <div class="navigation-text">
-              <span class="navigation__title">Миролюбец</span>
-              <span class="navigation__subtitle">закроем ваши крылья</span>
+        <div class="navigation-block">
+            <div class="navigation-logoblock">
+              <img src="img/index/hero/logo.png" alt="Логотип">
+              <div class="navigation-text">
+                <span class="navigation__title">Миролюбец</span>
+                <span class="navigation__subtitle">закроем ваши крылья</span>
+              </div>
             </div>
-          </div>
-          <div class="navigation-bar">
-            <a href="#" class="navigation-bar__item">Главная</a>
-            <a href="#" class="navigation-bar__item">О компании</a>
-            <a href="#" class="navigation-bar__item">Новости</a>
-            <a href="#" class="navigation-bar__item">Услуги</a>
-            <a href="#" class="navigation-bar__item">Отзывы</a>
-            <a href="#" class="navigation-bar__item">Контакты</a>
-          </div>
-          <button class="navigation__call">
-            <img src="img/index/hero/phone.png">
-          </button>
+            <div class="navigation-bar">
+              <a href="index.html" class="navigation-bar__item">Главная</a>
+              <a href="#why" class="navigation-bar__item">О компании</a>
+              <a href="news.html" class="navigation-bar__item">Новости</a>
+              <a href="service.html" class="navigation-bar__item">Услуги</a>
+              <a href="review.html" class="navigation-bar__item">Отзывы</a>
+              <a href="#" class="navigation-bar__item btn-active">Контакты</a>
+            </div>
+            <div class="navigation-icons">
+              <div class="navigation-burger" id="side-active">
+                <div class="navigation-menu"></div>
+                <div class="navigation-menu"></div>
+                <div class="navigation-menu"></div>
+              </div>
+              <button class="navigation__call btn-active">
+                <img src="img/index/hero/phone.png" alt="Картинка">
+              </button>
+            </div>
+            <div class="navigation-side" id="side-bar">
+              <div class="navigation-close">
+                  <button class="navigation-close__btn" id="side-close">&times;</button>
+              </div>
+              <ul class="navigation-list">
+                <li class="navigation-list__item">
+                  <a href="index.html" class="navigation-list__link">Главная</a>
+                </li>
+                <li class="navigation-list__item">
+                  <a href="#why" class="navigation-list__link">О Компании</a>
+                </li>
+                <li class="navigation-list__item">
+                  <a href="news.html" class="navigation-list__link">Новости</a>
+                </li>
+                <li class="navigation-list__item">
+                  <a href="service.html" class="navigation-list__link">Услуги</a>
+                </li>
+                <li class="navigation-list__item">
+                  <a href="review.html" class="navigation-list__link">Отзывы</a>
+                </li>
+                <li class="navigation-list__item">
+                  <a href="#" class="navigation-list__link btn-active">Контакты</a>
+                </li>
+              </ul>
+            </div>
         </div>
       </div>
-      <div class="hero-content">
-        <div class="hero-block">
-          <span class="hero__pretitle">Центр психологической поддержки</span>
-          <h1 class="hero__title">Миролюбец</h1>
-          <span class="hero__subtitle">Центр работает в Абакане. Работаем по скайпу по миру, он-лайн консультации. По медиации-Сибирь.</span>
-          <button class="hero__button">связаться с нами</button>
+    </div>
+    <header class="hero">
+      <div class="hero-image">
+        <img src="img/index/hero/hero.png" alt="Фото девушки">
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-block">
+            <span class="hero__pretitle">Центр психологической поддержки</span>
+            <h1 class="hero__title">Миролюбец</h1>
+            <span class="hero__subtitle">Центр работает в Абакане. Работаем по скайпу по миру, он-лайн консультации. По медиации-Сибирь.</span>
+            <button class="hero__button btn-active">Связаться с нами</button>
+          </div>
         </div>
       </div>
     </header>
-
-    <section class="why">
+    <section class="why" id="why">
       <div class="container">
         <h2 class="why__title">Почему мы?</h2>
         <div class="why-block">
-          <div class="why-item">
+          <div class="why-item wow zoomIn">
             <div class="why-item__image">
-              <img src="img/index/why/item-1.png">
+              <img src="img/index/why/item-1.png" alt="Картинка">
             </div>
             <span class="why-item__title">
               Инновационный<br> подход
@@ -79,11 +121,11 @@
             <p class="why-item__description">
               С другой стороны консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития. <br> Значимость этих проблем настолько очевидна, что <!--консультация с широким активом представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки и реализации соответствующий условий активизации. Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение дальнейших направлений развития. Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание модели развития.-->
             </p>
-            <button class="why-item__more">подробней</button>
+            <button class="why-item__more btn-active">подробней</button>
           </div>
-          <div class="why-item">
+          <div class="why-item wow zoomIn">
             <div class="why-item__image">
-              <img src="img/index/why/item-2.png">
+              <img src="img/index/why/item-2.png" alt="Картинка">
             </div>  
             <span class="why-item__title">
                 Более 10 лет<br> опыта работы
@@ -91,11 +133,11 @@
             <p class="why-item__description">
                 С другой стороны консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития. <br> Значимость этих проблем настолько очевидна, что <!--консультация с широким активом представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки и реализации соответствующий условий активизации. Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение дальнейших направлений развития. Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание модели развития.-->
             </p>
-            <button class="why-item__more">подробней</button>
+            <button class="why-item__more btn-active">подробней</button>
           </div>
-          <div class="why-item">
+          <div class="why-item wow zoomIn">
             <div class="why-item__image">
-              <img src="img/index/why/item-3.png">
+              <img src="img/index/why/item-3.png" alt="Картинка">
             </div>
             <span class="why-item__title">
                 Разнообразие<br>
@@ -104,12 +146,11 @@
             <p class="why-item__description">
                 С другой стороны консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития. <br> Значимость этих проблем настолько очевидна, что <!--консультация с широким активом представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки и реализации соответствующий условий активизации. Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение дальнейших направлений развития. Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание модели развития.-->
             </p>
-            <button class="why-item__more">подробней</button>
+            <button class="why-item__more btn-active">подробней</button>
           </div>
         </div>
       </div>
     </section>
-
     <section class="services">
       <div class="container">
         <div class="services-head">
@@ -124,7 +165,7 @@
         <div class="services-content">
           <div class="services-card">
             <div class="services-card__image">
-              <img src="img/index/services/image-1.jpg">
+              <img src="img/index/services/image-1.jpg" alt="Картинка">
             </div>
             <div class="services-card__info">
               <span class="services-card__title">Тренинг<br> по осознанию души</span>
@@ -135,7 +176,7 @@
           </div>
           <div class="services-card">
             <div class="services-card__image">
-              <img src="img/index/services/image-2.jpg">
+              <img src="img/index/services/image-2.jpg" alt="Картинка">
             </div>
             <div class="services-card__info">
               <span class="services-card__title">Тренинг<br> по осознанию души</span>
@@ -146,7 +187,7 @@
           </div>
           <div class="services-card">
             <div class="services-card__image">
-              <img src="img/index/services/image-3.jpg">
+              <img src="img/index/services/image-3.jpg" alt="Картинка">
             </div>
             <div class="services-card__info">
               <span class="services-card__title">Тренинг<br> по осознанию души</span>
@@ -157,7 +198,7 @@
           </div>
           <div class="services-card">
             <div class="services-card__image">
-              <img src="img/index/services/image-4.jpg">
+              <img src="img/index/services/image-4.jpg" alt="Картинка">
             </div>
             <div class="services-card__info">
               <span class="services-card__title">Тренинг<br> по осознанию души</span>
@@ -169,42 +210,40 @@
         </div>
       </div>
     </section>
-
-    <section class="facts">
+    <div class="facts">
       <div class="container">
         <div class="facts-block">
           <div class="facts-item">
             <div class="facts-item__image">
-              <img src="img/index/facts/fact-1.png">
+              <img src="img/index/facts/fact-1.png" alt="Картинка">
             </div>
             <span class="facts-item__number">+900</span>
             <span class="facts-item__text">Клиентов</span>
           </div>
           <div class="facts-item">
             <div class="facts-item__image">
-              <img src="img/index/facts/fact-2.png">
+              <img src="img/index/facts/fact-2.png" alt="Картинка">
             </div>
             <span class="facts-item__number">30</span>
             <span class="facts-item__text">Программ</span>
           </div>
           <div class="facts-item">
             <div class="facts-item__image">
-              <img src="img/index/facts/fact-3.png">
+              <img src="img/index/facts/fact-3.png" alt="Картинка">
             </div>
             <span class="facts-item__number">30</span>
             <span class="facts-item__text">Сертификатов</span>
           </div>
           <div class="facts-item">
             <div class="facts-item__image">
-              <img src="img/index/facts/fact-4.png">
+              <img src="img/index/facts/fact-4.png" alt="Картинка">
             </div>
             <span class="facts-item__number">9</span>
             <span class="facts-item__text">Специалистов</span>
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
     <section class="free">
       <div class="container">
         <div class="free-block">
@@ -214,12 +253,11 @@
           </div>
           <div class="free-buttons">
             <button class="free-buttons__order">заказать звонок</button>
-            <buttons class="free-buttons__signup">записаться на прием</buttons>
+            <button class="free-buttons__signup">записаться на прием</button>
           </div>
         </div>
       </div>
     </section>
-    
     <footer class="footer">
       <div class="container">
         <div class="footer-head">
@@ -237,25 +275,25 @@
           <div class="footer-social">
             <p class="footer-social__text">С другой стороны консультация с широким активом в значительной степени обуславливает создание <!--направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки и реализации соответствующий условий активизации. Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение дальнейших направлений развития. Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание модели развития.--></p>
             <div class="footer-social__block">
-              <a href="#" class="footer-social__icon"><img src="img/footer/vk.png"></a>
-              <a href="#" class="footer-social__icon"><img src="img/footer/fb.png"></a>
-              <a href="#" class="footer-social__icon"><img src="img/footer/inst.png"></a>
+              <a href="#" class="footer-social__icon"><img src="img/footer/vk.png" alt="Картинка"></a>
+              <a href="#" class="footer-social__icon"><img src="img/footer/fb.png" alt="Картинка"></a>
+              <a href="#" class="footer-social__icon"><img src="img/footer/inst.png" alt="Картинка"></a>
             </div>
           </div>
           <div class="footer-column">
-            <a href="" class="footer-column__text">Новости</a>
-            <a href="" class="footer-column__text">Анонсы</a>
-            <a href="" class="footer-column__text">Контакты</a>
+            <a href="#" class="footer-column__text">Новости</a>
+            <a href="#" class="footer-column__text">Анонсы</a>
+            <a href="#" id="contacts" class="footer-column__text btn-active">Контакты</a>
           </div>
           <div class="footer-column">
-            <a href="" class="footer-column__text">Психология</a>
-            <a href="" class="footer-column__text">Психоаналитика</a>
-            <a href="" class="footer-column__text">Услуги медиатора</a>
+            <a href="#" class="footer-column__text">Психология</a>
+            <a href="#" class="footer-column__text">Психоаналитика</a>
+            <a href="#" class="footer-column__text">Услуги медиатора</a>
           </div>
           <div class="footer-column">
-            <a href="" class="footer-column__text">Психология</a>
-            <a href="" class="footer-column__text">Психоаналитика</a>
-            <a href="" class="footer-column__text">Услуги медиатора</a>
+            <a href="#" class="footer-column__text">Психология</a>
+            <a href="#" class="footer-column__text">Психоаналитика</a>
+            <a href="#" class="footer-column__text">Услуги медиатора</a>
           </div>
         </div>
         <div class="footer-developer">
@@ -266,5 +304,36 @@
     </footer>
   </main>
 
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <div class="modal-content">
+        <h3 class="modal-dialog__title">Получите бесплатную консультацию</h3>
+        <span class="modal-dialog__subtitle">Заполите поля и мы Вам перезвоним</span>
+        <form action="#" class="modal-form" id="modal-form" onsubmit="ym(55392682, 'reachGoal', 'modal-form'); return true;">
+          <input type="text" class="modal-form__input" name="name" placeholder="Ваше имя" required>
+          <input type="tel" class="modal-form__input phone" name="phone" placeholder="Ваш телефон" required>
+          <input type="email" class="modal-form__input" name="email" placeholder="Ваш email" required>
+          <button class="modal-form__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal__success" id="success">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close-success">&times;</button>
+      <div class="modal-content">
+        <h3 class="modal-dialog__title">Спасибо за заявку, скоро мы Вам перезвоним</h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>  
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html>

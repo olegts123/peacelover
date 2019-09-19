@@ -1,0 +1,212 @@
+.navigation
+  background-color: $white-color
+  padding-top: 16px
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 33px
+  &-logoblock
+    display: flex
+  &-text
+    margin-bottom: -6px
+    margin-left: 10px
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+    align-items: center
+  &__title
+    display: block
+    font-size: 31px
+    font-weight: 700
+    line-height: 19px
+    text-transform: uppercase
+    color: $font-color
+    margin-bottom: 11px
+  &__subtitle
+    display: block
+    font-size: 14px
+    font-weight: 400
+    line-height: 20.3px
+    text-transform: uppercase
+    letter-spacing: 1.56px
+    color: $font-color
+  &-icons
+    display: flex
+    align-items: center
+    padding-top: 12px
+  &-burger
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    width: 30px
+    height: 21px
+    margin-right: 30px
+  &-menu
+    width: 100%
+    height: 3px
+    background-color: $main-color
+  &-bar
+    margin-left: 45px
+    display: flex
+    padding-top: 17px
+    &__item
+      position: relative
+      margin-right: 35px 
+      text-decoration: none
+      font-size: 14px
+      font-weight: 700
+      line-height: 19px
+      text-transform: uppercase
+      color: $main-text
+      transition: 0.2s
+      &::after
+        content: ''
+        height: 2px
+        width: 0px
+        position: absolute
+        top: 28px
+        left: 13px
+        background-color: $main-color
+      &:hover
+        cursor: pointer
+        color: $nav-hover
+        &::after
+          width: 38px
+  &__call
+    background-color: $main-color
+    border-radius: 50%
+    border: none
+    height: 45px
+    width: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      cursor: pointer
+      background-color: darken($main-color, 15%)
+  &-side
+    position: fixed
+    display: flex
+    flex-direction: column
+    top: 0
+    right: -100%
+    width: 40%
+    height: 100vh
+    background-color: $white-color
+    opacity: 0.95
+    transition: 0.5s
+    z-index: 100
+    padding: 10px
+    &_active
+      right: 0
+  &-close
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    &__btn
+      margin-top: 5px
+      margin-right: 5px
+      border: none
+      border-radius: 50%
+      font-size: 30px
+      color: $font-color
+      width: 35px
+      background-color: $white-color
+      text-align: center
+      &:active
+        background-color: $main-color
+        color: $white-color
+  &-list
+    list-style: none
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    height: 100%
+    padding: 50px 60px
+    &__link
+      text-decoration: none
+      text-transform: uppercase
+      font-size: 20px
+      color: $font-color
+      border-bottom: 2px solid $main-color
+
+
+@media (max-width: 1260px)
+  .navigation
+    &__title
+      font-size: 25px
+    &__subtitle
+      font-size: 11px
+    &-bar
+      &__item
+        font-size: 12px
+        margin-right: 22px
+    &__call
+      width: 35px
+      height: 35px
+
+
+@media (max-width: 991px)
+  .navigation
+    &-bar
+      display: none
+    &-burger
+      display: flex
+    &__call
+      &:hover
+        cursor: auto
+        background-color: $main-color
+
+@media (max-width: 768px)
+  .navigation
+    &-side
+      width: 50%
+
+@media (max-width: 570px)
+  .navigation
+    padding-top: 12px
+    &-block
+      padding-bottom: 15px
+    &__title
+      font-size: 21px
+      margin-bottom: 5px
+    &__subtitle
+      font-size: 9px
+    &-logoblock
+      img
+        width: 90px
+    &-side
+      width: 100%
+
+@media (max-width: 430px)
+  .navigation
+    &-logoblock
+      img
+        width: 70px
+    &-text
+      margin-left: 5px
+    &__title
+      margin-bottom: 0
+      font-size: 17px
+      line-height: 16px
+    &__subtitle
+      font-size: 5px
+      letter-spacing: 0.7px
+      line-height: 19px
+    &-burger
+      width: 20px
+      margin-right: 15px
+      height: 18px
+    &-menu
+      height: 2px
+    &__call
+      width: 30px
+      height: 30px
+      img
+        width: 15px
+    &-icons
+      padding-top: 16px
+  &-list
+    &__link
+      font-size: 18px

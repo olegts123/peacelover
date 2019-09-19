@@ -1,6 +1,15 @@
 .why
   padding-top: 39px
   padding-bottom: 103px
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    background: url('../img/index/services/circles.png') no-repeat
+    bottom: -370px
+    right: 0
+    width: 302px
+    height: 740px
   &__title
     font-size: 46px
     font-weight: 700
@@ -57,7 +66,7 @@
       color: $description
       margin-bottom: 35px
       text-align: center
-      max-width: 374px
+      max-width: 375px
     &__more
       font-size: 14px
       font-weight: 700
@@ -75,5 +84,95 @@
         top: 31px
         left: 25px
         background-color: $main-color
+      &:hover
+        cursor: pointer
+        color: $footer-border
 
+@media (max-width: 1800px)
+  .why
+    &::after
+      display: none
 
+@media (max-width: 1260px)
+  .why
+    &-item
+      &__image
+        margin-bottom: 35px
+      &__title
+        margin-bottom: 15px
+      &__description
+        max-width: 305px
+        margin-bottom: 30px
+
+@media (max-width: 991px)
+  .why
+    &-block
+      flex-wrap: wrap
+      justify-content: center
+    &-item
+      &:first-child
+        margin-right: 70px
+        margin-bottom: 50px
+      &__more
+        &:hover
+          cursor: auto
+          color: $main-color
+
+@media (max-width: 768px)
+  .why
+    &-item
+      margin-bottom: 100px
+      &:first-child
+        margin-right: 0
+        margin-bottom: 100px
+      &:last-child
+        margin-bottom: 0
+      
+@media (max-width: 570px)
+  .why
+    &__title
+      font-size: 35px
+    &-item
+      margin-bottom: 70px
+      &:first-child
+        margin-bottom: 70px
+      &__image
+        width: 120px
+        height: 120px
+        margin-bottom: 20px
+        &::before
+          display: none
+        img
+          width: 35px
+      &__description
+        max-width: 310px
+        margin-top: 0
+        margin-bottom: 20px
+        line-height: 16px
+        font-size: 13px
+
+@media (max-width: 320px)
+  .why
+    padding-top: 10px
+    padding-bottom: 60px
+    &__title
+      font-size: 25px
+    &-item
+      margin-bottom: 50px
+      &:first-child
+        margin-bottom: 50px
+      &__image
+        width: 100px
+        height: 100px
+        margin-bottom: 15px
+        img
+          width: 27px
+      &__title
+        font-size: 20px
+        line-height: 22px
+      &__description
+        margin-bottom: 15px
+      &__more
+        font-size: 13px
+        &::after
+          top: 25px

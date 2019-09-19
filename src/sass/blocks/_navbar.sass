@@ -5,7 +5,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding-top: 11px
+    padding-top: 13px
     padding-bottom: 8px
     &__phone
       display: flex
@@ -42,3 +42,50 @@
     font-weight: bold
     line-height: 19px    
     text-decoration: none
+
+@media (max-width: 768px)
+  .navbar
+    &-block &__phone
+        font-size: 12px
+    &-block  &__adress 
+        font-size: 12px
+
+@media (max-width: 570px)
+  .navbar
+    &-block
+      &__phone
+        margin-right: 12px
+    &-block &__phone
+        font-size: 10px
+        margin-left: 4px
+    &-block  &__adress 
+        font-size: 10px
+        margin-left: 5px
+    &__login
+      font-size: 10px
+    &__signup
+      font-size: 10px
+
+@media (max-width: 430px)
+  .navbar
+    &__info
+      display: flex
+      flex-direction: column
+    &-block
+      &__phone
+        img
+          width: 11px
+      &__adress
+        img
+          width: 9px
+    &__phone
+        font-size: 9px
+    &-signup
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__login
+      border-right: none
+      padding-right: 0
+    &__signup
+      margin-left: 0

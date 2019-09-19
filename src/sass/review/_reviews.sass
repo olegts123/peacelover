@@ -1,0 +1,151 @@
+.review
+  display: flex
+  flex-direction: column
+  max-width: 379px
+  &-blog
+    background-color: $bg-color
+    padding: 55px 35px 52px
+    margin-bottom: 41px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      height: 52px
+      width: 52px
+      background-color: $bg-color
+      transform: rotate(45deg)
+      bottom: -8px
+      left: 35px
+    &__score 
+      padding-left: 2px
+      margin-bottom: 26px
+    &__text
+      margin: 0
+      max-width: 309px
+      font-size: 15px
+      font-weight: 400
+      line-height: 24px
+      color: $review-text
+  &-user
+    display: flex
+    align-items: center
+    padding: 0 21px
+    &__face
+      margin-right: 19px
+    &__info
+      display: flex
+      flex-direction: column
+      padding: 10px 0
+    &__name
+      font-size: 22px
+      font-weight: 700  
+      color: $white-color
+      margin-bottom: 12px
+    &__job
+      font-size: 14px
+      font-weight: 700
+      color: $white-color
+  &s
+    padding-top: 94px
+    padding-bottom: 171px
+    background: $main-color url('../img/review/bg.jpg') no-repeat
+    &-title
+      padding-left: 4px
+      margin-top: 0
+      margin-bottom: 94px
+      font-size: 41px
+      font-weight: 700
+      text-align: center
+      color: $review-font
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        height: 3px
+        width: 92px
+        background-color: $white-color
+        top: 81px
+        left: 548px
+    &-block
+      display: flex
+      justify-content: space-between
+
+@media (max-width: 1260px)
+  .review
+    max-width: 300px
+    &-blog
+      padding: 50px 30px 50px
+      &__text
+        line-height: 21px
+    &s
+      padding-bottom: 150px
+      &-title
+        &::after
+          left: 45%
+    
+@media (max-width: 991px)
+  .review
+    margin-bottom: 50px
+    max-width: 400px
+    &-blog
+      padding: 60px 35px
+      z-index: 100
+      &__text
+        line-height: 24px
+        font-size: 15px
+      &::after
+        z-index: -1
+    &s
+      background-image: linear-gradient(to top, #816890 0%, #dc7aa3 100%);
+      padding-top: 65px
+      padding-bottom: 30px
+      &-block
+        flex-direction: column
+        align-items: center
+      
+@media (max-width: 768px)
+  .review
+    &s
+      &-title
+        &::after
+          left: 40%
+
+@media (max-width: 570px)
+  .review
+    &-blog
+      padding: 28px 15px
+      margin-bottom: 25px
+      &__score
+        padding: 0
+        margin-bottom: 20px
+      &__text
+        font-size: 13px
+        line-height: 20px
+    &-user
+      padding-left: 30px
+      &__face
+        margin-right: 15px
+        img
+          width: 55px
+      &__name
+        font-size: 20px
+        margin-bottom: 10px
+      &__job
+        font-size: 12px
+    &s
+      padding-top: 45px
+      padding-bottom: 10px
+      &-title
+        padding: 0
+        font-size: 23px
+        margin-bottom: 60px
+        &::after
+          left: 38%
+          top: 45px
+
+@media (max-width: 320px)
+  .review
+    &s
+      &-title
+        &::after
+          left: 32%

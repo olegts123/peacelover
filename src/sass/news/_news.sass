@@ -1,0 +1,284 @@
+.news
+  background-color: $bg-color
+  padding-top: 107px
+  padding-bottom: 97px
+  &-wrap
+    display: flex
+  &-left
+    flex-basis: 50%
+    &__title
+      margin: 0
+      margin-bottom: 90px
+      font-size: 41px
+      font-weight: 700
+      color: $main-text
+      padding-left: 2px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        height: 3px
+        width: 92px
+        opacity: 0.09
+        background-color: $main-text
+        top: 79px
+        left: 2px
+    &__block
+      display: flex
+      justify-content: space-between
+  &-event
+    display: flex
+    flex-direction: column
+    padding: 28px 30px 58px
+    background-color: $white-color
+    position: relative
+    z-index: 10
+    &:first-child
+      margin-right: 26px
+    &__date
+      position: absolute
+      top: -23px
+      left: 23px
+      width: 71px
+      height: 71px
+      z-index: 100
+      border-radius: 50%
+      text-transform: uppercase
+      color: $white-color
+      background-color: $main-color
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &__number
+      font-size: 30px
+      font-weight: 700
+      line-height: 14px
+      text-transform: uppercase
+      margin-bottom: 7px
+      margin-top: 9px
+    &__month
+      text-transform: uppercase
+      font-size: 14px
+      font-weight: 700
+    &__title
+      font-size: 22px
+      font-weight: 700
+      line-height: 28px
+      color: $main-text
+      max-width: 140px
+      margin-top: 29px
+      margin-bottom: 19px
+      padding-left: 3px
+    &__text
+      margin: 0
+      max-width: 170px
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+      margin-bottom: 38px
+      color: $review-text
+      padding-left: 3px
+    &__button
+      margin-left: 3px
+      text-decoration: none
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      color: $main-color
+      position: relative
+      &::after
+        content: ''
+        height: 2px
+        width: 44px
+        background-color: $main-color
+        top: 26px
+        left: 17px
+        position: absolute
+  &-right
+    padding-left: 27px
+    flex-basis: 50% 
+    &__title
+      margin: 0
+      margin-bottom: 90px
+      font-size: 41px
+      font-weight: 700
+      color: $main-text
+      padding-left: 2px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        height: 3px
+        width: 92px
+        opacity: 0.09
+        background-color: $main-text
+        top: 79px
+        left: 2px
+  &-process
+    padding: 30px
+    padding-bottom: 33px
+    background-color: $white-color
+  &-slider
+    position: relative
+    margin-bottom: 25px
+    &__frame
+      margin-bottom: 30px
+      iframe
+          width: 528px
+          height: 328px
+    &__name
+      display: block
+      font-size: 22px
+      font-weight: 700
+      color: $main-text
+      text-align: center
+      padding-right: 15px
+    &__social
+      position: absolute
+      bottom: 30px
+      left: 161px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 24px
+      background-color: $white-color
+      padding: 15px 92px 13px
+      a
+        text-decoration: none
+        margin-right: 13px
+        &:last-child
+          margin-right: 0
+    &__nav
+      text-align: center
+      padding-right: 15px
+    &__prev,&__next
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      color: $slider-nav
+      &:hover
+        cursor: pointer
+        color: lighten($slider-nav, 10%)
+    &__prev
+      margin-right: 14px
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        width: 2px
+        height: 12px
+        background-color: $slider-nav
+        top: 2px
+        right: -11px 
+        
+@media (max-width: 1260px)
+  .news
+    &-wrap
+      flex-direction: column
+    &-left
+      margin-bottom: 70px
+      &__block
+        justify-content: space-around
+    &-right
+      &__content
+        display: flex
+        justify-content: center
+    &-process
+      display: inline-block
+    &-slider
+      &__social
+        left: 26%
+
+@media (max-width: 991px)
+  .news
+    &-slider
+      &__prev,&__next
+        &:hover
+          cursor: auto
+          color: $slider-nav
+
+@media (max-width: 768px)
+  .news
+    padding-top: 70px
+    padding-bottom: 90px
+    &-event
+      padding: 28px 25px 45px
+      &__date
+        width: 55px
+        height: 55px
+      &__number
+        font-size: 23px
+        margin-top: 5px
+        margin-bottom: 5px
+      &__month
+        font-size: 12px
+      &__title
+        margin-top: 20px
+        margin-bottom: 15px
+        font-size: 20px
+        line-height: 25px
+      &__text
+        max-width: 210px
+        font-size: 14px
+        line-height: 22px
+        margin-bottom: 25px
+      &:first-child
+        margin-right: 5px        
+    &-left
+      &__title
+        font-size: 35px
+        margin-bottom: 80px
+        &::after
+          top: 65px
+    &-right
+      padding-left: 0
+      &__title
+        font-size: 35px
+        margin-bottom: 80px
+        &::after
+          top: 65px
+    &-slider
+      &__social
+        left: 25%
+
+@media (max-width: 570px)
+  .news
+    &-left
+      &__block
+        flex-direction: column
+        align-items: center
+    &-event
+      &:first-child
+        margin-right: 0
+        margin-bottom: 50px
+    &-slider
+      position: relative
+      margin-bottom: 25px
+      &__frame
+        iframe
+          width: 100%
+          height: auto
+      &__nav
+        padding: 0
+      &__social
+        padding: 15px 20% 13px
+        left: 19%
+      &__name
+        font-size: 20px
+
+@media (max-width: 320px)
+  .news
+    padding-bottom: 60px
+    &-slider
+      margin-bottom: 
+      &__frame
+        margin-bottom: 25px
+      &__prev,&__next
+        font-size: 12px
+      &__prev
+        &::after
+          top: 1px
+      &__social
+        padding: 8px 17% 5px
+        left: 16%

@@ -30,6 +30,9 @@
       font-weight: 700
       text-transform: uppercase
       color: $white-color
+      &:hover
+        cursor: pointer
+        background-color: lighten($main-color, 7%)
     &__signup
       border: none
       background-color: $facts-num
@@ -40,3 +43,76 @@
       text-transform: uppercase
       color: $white-color
       margin-left: 23px
+      &:hover
+        cursor: pointer
+        background-color: lighten($facts-num, 7%)
+
+
+
+@media (max-width: 1260px)
+  .free
+    &__title
+      font-size: 28px
+      margin-bottom: 10px
+    &-buttons
+      &__order
+        font-size: 12px
+        padding: 17px 30px
+      &__signup
+        font-size: 12px
+        padding: 18px 20px 16px
+
+@media (max-width: 991px)
+  .free
+    &-block
+      justify-content: space-between
+    &-buttons
+      flex-direction: column
+      justify-content: flex-end
+      align-items: center
+      margin: 0
+      &__signup
+        margin-left: 0
+        padding: 15px
+        &:hover
+          cursor: auto
+          background-color: $main-color
+      &__order
+        padding: 15px 30px
+        margin-bottom: 10px
+        &:hover
+          cursor: auto
+          background-color: $main-color
+
+@media (max-width: 768px)
+  .free
+    padding: 40px 0
+    &-text
+      max-width: 350px
+    &__title
+      font-size: 19px
+      margin-bottom: 10px
+    &__subtitle
+      font-size: 12px
+      line-height: 22px
+    &-buttons
+      &__order
+        font-size: 11px
+      &__signup
+        font-size: 11px
+      
+@media (max-width: 570px)
+  .free
+    padding: 30px 0
+    &__title
+      font-size: 15px
+      margin-bottom: 0
+    &-block
+      flex-direction: column
+    &-text
+      max-width: 100%
+      padding: 0
+      line-height: 20px
+    &-buttons
+      margin-top: 20px
+

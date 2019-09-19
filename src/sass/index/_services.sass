@@ -2,15 +2,6 @@
   background-color: $bg-color
   padding-top: 78px
   padding-bottom: 138px
-  position: relative
-  &::before
-    content: ''
-    position: absolute
-    background: url('../img/index/services/circles.png') no-repeat
-    top: -370px
-    right: 0
-    width: 302px
-    height: 740px
   &-head
     display: flex
     justify-content: space-between
@@ -116,3 +107,82 @@
       line-height: 27px
       color: $main-color
       text-align: center
+
+
+@media (max-width: 1260px)
+  .services
+    padding-bottom: 50px
+    &-content
+      flex-wrap: wrap
+      max-width: 800px
+      margin: 0 auto
+    &-card
+      margin-left: 0
+      margin-bottom: 50px
+
+@media (max-width: 991px)
+  .services
+    &-head
+      &__title
+        font-size: 35px
+    &-nav
+      margin-right: -15px
+      &__item
+        font-size: 12px
+        padding: 12px 15px
+        &:hover
+          color: $font-color
+          background-color: $bg-color
+    &-card
+      &:hover
+        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.05)
+        .services-card__info
+          background-color: $white-color
+        .services-card__title
+          color: $main-color
+        .services-card__description
+          color: $font-color
+          &::after
+            background-color: $card-line
+        .services-card__costtext
+          color: $font-color
+        .services-card__cost
+          color: $main-color
+
+@media (max-width: 768px)
+  .services
+    &-content
+      flex-direction: column
+    &-card
+      margin: auto
+      margin-bottom: 30px
+      &:first-child
+        margin-left: auto
+    &-nav
+      display: none
+
+@media (max-width: 320px)
+  .services
+    padding-top: 40px
+    &-head
+      &__title
+        font-size: 25px
+    &-card
+      img
+        max-width: 250px
+      &__info
+        padding: 20px 31px 25px
+      &__title
+        font-size: 20px
+        margin-bottom: 15px
+      &__description
+        font-size: 13px
+        margin-bottom: 30px
+        line-height: 19px
+        &::after
+          top: 50px
+          left: 66px
+      &__costtext
+        font-size: 13
+      &__cost
+        font-size: 20px

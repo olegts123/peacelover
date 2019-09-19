@@ -1,88 +1,26 @@
-.navigation
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding-bottom: 40px
-  &-logoblock
-    display: flex
-  &-text
-    margin-bottom: -6px
-    margin-left: 10px
+.hero
+  background: $main-color url('../img/index/hero/bg.jpg') no-repeat
+  background-size: cover
+  margin-top: 9px
+  position: relative
+  &-image
+    position: absolute
+    bottom: 0
+    left: 1.8%
+    width: 60%
+    z-index: 1
+    img
+      width: 100%
+  &-content  
+    color: $white-color
     display: flex
     justify-content: flex-end
-    flex-direction: column
-    align-items: center
-  &__title
-    display: block
-    font-size: 31px
-    font-weight: 700
-    line-height: 19px
-    text-transform: uppercase
-    color: $font-color
-    margin-bottom: 11px
-  &__subtitle
-    display: block
-    font-size: 14px
-    font-weight: 400
-    line-height: 20.3px
-    text-transform: uppercase
-    letter-spacing: 1.56px
-    color: $font-color
-  &-bar
-    margin-left: 45px
-    display: flex
-    padding-top: 17px
-    &__item
-      position: relative
-      margin-right: 35px 
-      text-decoration: none
-      font-size: 14px
-      font-weight: 700
-      line-height: 19px
-      text-transform: uppercase
-      color: $main-text
-      transition: 0.2s
-      &::after
-        content: ''
-        height: 2px
-        width: 0px
-        position: absolute
-        top: 28px
-        left: 13px
-        background-color: $main-color
-      &:hover
-        cursor: pointer
-        color: $nav-hover
-        &::after
-          width: 38px
-  &__call
-    margin-top: 12px
-    background-color: $main-color
-    border-radius: 50%
-    border: none
-    height: 45px
-    width: 45px
-    display: flex
-    justify-content: center
-    align-items: center
-    &:hover
-      cursor: pointer
-      background-color: darken($main-color, 15%)
-
-.hero
-  padding-top: 18px
-  &-content
-    background: $main-color url('../img/index/hero/hero.jpg') no-repeat
-    background-size: contain
-    height: 907px
-    display: flex
-    flex-direction: column
-    color: $white-color
+    padding-bottom: 332px
   &-block
     flex-basis: 50%
-    margin-left: auto
-    padding-right: 375px
     margin-top: 302px
+    padding-left: 5px
+    z-index: 10
   &__pretitle
     display: block
     font-size: 25px
@@ -118,3 +56,100 @@
     border: none
     border-radius: 25px
     max-width: 210px
+    &:hover
+      background-color: darken($white-color, 15%)
+      color: $dark-color
+      cursor: pointer
+
+@media (max-width: 1500px)
+  .hero
+    &-image
+      width: 60%
+    &-content
+      padding-bottom: 250px
+    &-block
+      margin-top: 250px
+  
+@media (max-width: 1200px)
+  .hero
+    &-image
+      width: 60%
+    &-content
+      padding-bottom: 200px
+    &-block
+      margin-top: 200px
+    &__pretitle
+      font-size: 20px
+    &__title
+      font-size: 70px
+      margin-bottom: 20px
+    &__subtitle
+      font-size: 12px
+
+@media (max-width: 991px)
+  .hero
+    &-image
+      width: 60%
+    &-content
+      padding-bottom: 150px
+    &-block
+      margin-top: 150px
+    &__pretitle
+      font-size: 16px
+      margin-bottom: 6px
+    &__title
+      font-size: 60px
+      margin-bottom: 5px
+    &__subtitle
+      font-size: 12px
+
+@media (max-width: 768px)
+  .hero
+    &-image
+      display: none
+    &-content
+      justify-content: center
+    &__button
+      font-size: 12px
+      padding: 5px 30px
+
+
+@media (max-width: 570px)
+  .hero
+    &-content
+      padding-bottom: 85px
+      justify-content: flex-start
+    &-block
+      margin-top: 100px
+    &__pretitle
+      font-size: 12px
+      margin-bottom: 0
+    &__title
+      font-size: 50px
+      margin-bottom: 0
+      line-height: 80px
+    &__subtitle
+      font-size: 10px
+      margin-bottom: 15px
+
+@media (max-width: 320px)
+  .hero
+    &-content
+      padding-bottom: 65px
+    &-block
+      margin-top: 70px
+    &__pretitle
+      font-size: 9px
+      margin-bottom: 0
+    &__title
+      font-size: 30px
+      margin-bottom: 0
+      line-height: 60px
+    &__subtitle
+      font-size: 8px
+      margin-bottom: 10px
+      line-height: 15px
+    &__button
+      font-size: 10px
+      line-height: 25px
+      padding: 3px 25px
